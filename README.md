@@ -1,7 +1,5 @@
 # Snippeter
 
-[![GitHub release](https://img.shields.io/github/release/NLDev/Snippeter.svg)](https://github.com/NLDev/Snippeter/releases)
-
 <p align="center">
 <img height="150" width="auto" src="https://raw.githubusercontent.com/NLDev/Snippeter/master/icon-big.png" /><br>
 Export StackOverflow snippets to JSFiddle
