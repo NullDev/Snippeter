@@ -12,12 +12,12 @@ var noop = () => {};
 chrome.extension.sendMessage({}, function(response) { noop(); });
 
 var snip = ".snippet";
+
+$(document).ajaxSuccess(function(event, xhr, settings){ createElement(); });
+
 $(document).ready(function(){
     var elm = $(snip).length;
-    $(snip).each(function(i, obj) {
-        var btnElement = '<button class="nl--export--btn" type="button"><span class="icon-play-white _hover"></span> Export to JSFiddle</button>';
-        $(obj).find(".snippet-ctas").find(".popout-code").before(btnElement);
-    });
+    createElement();
 
     $(".nl--export--btn").off().on("click", function(){
         var js   = null,
@@ -50,6 +50,13 @@ $(document).ready(function(){
 
     storage.set({ count: elm });
 });
+
+function createElement(){
+    $(snip).each(function(i, obj) {
+        var btnElement = '<button class="nl--export--btn" type="button"><span class="icon-play-white _hover"></span> Export to JSFiddle</button>';
+        $(obj).find(".snippet-ctas").find(".popout-code").before(btnElement);
+    });
+}
 
 function convertHTMLEntity(text){
     var span = document.createElement("span");
