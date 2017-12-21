@@ -36,7 +36,7 @@ var jsfRequest = function(resObj){
 };
 
 function postReq(url, data) {
-    chrome.tabs.create({ url: chrome.runtime.getURL("post.html") }, function(tab){
+    chrome.tabs.create({ url: chrome.runtime.getURL("./post/post.html") }, function(tab){
         var handler = function(tabId, changeInfo){
             if(tabId === tab.id && changeInfo.status === "complete"){
                 chrome.tabs.onUpdated.removeListener(handler);
