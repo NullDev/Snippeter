@@ -24,15 +24,7 @@ var jsfRequest = function(resObj){
     var css  = (resObj.css  ? resObj.css  : "");
     var html = (resObj.html ? resObj.html : "");
 
-    chrome.tabs.create({ url: uri });
-
-    chrome.tabs.query({ active: true, currentWindow: true }, function(arr){
-        var activeTab = arr[0];
-        var url = (activeTab.url).toLowerCase();
-
-        if (/(jsfiddle\.net)/gi.test(url)) postReq("https://jsfiddle.net/api/post/library/pure/", { js: js, css: css, html: html });
-        return true;
-    });
+    postReq("https://jsfiddle.net/api/post/library/pure/", { js: js, css: css, html: html });
 };
 
 function postReq(url, data) {
