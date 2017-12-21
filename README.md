@@ -1,7 +1,7 @@
 # Snippeter
 
 <p align="center">
-<img height="150" width="auto" src="https://raw.githubusercontent.com/NLDev/Snippeter/master/icon-big.png" /><br>
+<img height="150" width="auto" src="https://raw.githubusercontent.com/NLDev/Snippeter/master/icon/icon-big.png" /><br>
 Export StackOverflow snippets to JSFiddle
 </p>
 
