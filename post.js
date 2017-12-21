@@ -14,4 +14,8 @@ var onMessageHandler = function(message){
     form.submit();
 }
 
+var d = new Date();
+var y = d.getFullYear();
+document.getElementById("year").innerHTML = y;
+
 chrome.runtime.onMessage.addListener(onMessageHandler);
