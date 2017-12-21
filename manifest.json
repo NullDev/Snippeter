@@ -23,13 +23,6 @@
             ],
             "css" : ["custom.css"],
             "matches": ["*://stackoverflow.com/*"]
-        },
-        {
-            "js": [
-                "lib/jquery-3.2.1.min.js", 
-                "content-JF.js" 
-            ],
-            "matches": ["*://jsfiddle.net/*"]
         }
     ],
     "background":{
@@ -37,7 +30,6 @@
     },
     "permissions": [
         "*://stackoverflow.com/*",
-        "*://jsfiddle.net/*",
         "tabs",
         "storage"
     ]
