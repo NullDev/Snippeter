@@ -17,7 +17,7 @@ This is a chrome extension to export [StackOverflow](https://stackoverflow.com) 
 
 The recommended way of installing the chrome extension is by downloading it in the chrome store here:
 
-[https://chrome.google.com/webstore/detail/](https://chrome.google.com/webstore/detail/)
+[https://chrome.google.com/webstore/detail/snippeter/allhkadmlojmooicclmkdknifdpikokg](https://chrome.google.com/webstore/detail/snippeter/allhkadmlojmooicclmkdknifdpikokg)
 
 This way you will get automatic updates.
 
