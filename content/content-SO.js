@@ -63,7 +63,8 @@ $(document).ready(function(){
                 chrome.runtime.sendMessage({ type: "url", options: { html: codeStr }}); 
                 break;
             }
-            case "nl--exporter--btn--none": {
+            case "nl--exporter--btn--none": 
+            default: {
                 noop();
                 break;
             }
