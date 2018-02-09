@@ -25,23 +25,13 @@ $(document).ready(function(){
             css  = null,
             html = null;
 
-        var jsTmp = $(this).closest(".snippet-code").find(".snippet-code-js");
-        if ($(jsTmp).length){
-            js = $(jsTmp).find("code").html().replace(/<(?:.|\n)*?>/gm, "");
-            js = convertHTMLEntity(js);
-        }
-
-        var cssTmp = $(this).closest(".snippet-code").find(".snippet-code-css");
-        if ($(cssTmp).length){
-            css = $(cssTmp).find("code").html().replace(/<(?:.|\n)*?>/gm, "");
-            css = convertHTMLEntity(css);
-        }
-
+        var jsTmp   = $(this).closest(".snippet-code").find(".snippet-code-js");
+        var cssTmp  = $(this).closest(".snippet-code").find(".snippet-code-css");
         var htmlTmp = $(this).closest(".snippet-code").find(".snippet-code-html");
-        if ($(htmlTmp).length){
-            html = $(htmlTmp).find("code").html().replace(/<(?:.|\n)*?>/gm, "");
-            html = convertHTMLEntity(html);
-        }
+
+        if ($(jsTmp).length)   js   = convertHTMLEntity($(jsTmp).find("code").html().replace(/<(?:.|\n)*?>/gm, ""));
+        if ($(cssTmp).length)  css  = convertHTMLEntity($(cssTmp).find("code").html().replace(/<(?:.|\n)*?>/gm, ""));
+        if ($(htmlTmp).length) html = convertHTMLEntity($(htmlTmp).find("code").html().replace(/<(?:.|\n)*?>/gm, ""));
 
         chrome.runtime.sendMessage({ type: "url", options: { js: js, css: css, html: html }});        
     });
