@@ -69,10 +69,14 @@ function createElement(){
         var btnElement = '<button class="nl--export--btn" type="button"><span class="icon-play-white _hover"></span> Export to JSFiddle</button>';
         $(obj).find(".snippet-ctas").find(".popout-code").before(btnElement);
     });
-    $(prec).each(function(i, obj){
-        if (!$(obj).closest(".snippet").length){
-            var btnElement = '<div class="nl--exporter--menu"><nav><ul><li><span class="nl--exporter--btn"></span><ul class="nl--exporter--inner"><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--js"><a>JS</a></li><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--html"><a>HTML</a></li><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--css"><a>CSS</a></li><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--none"><a href="http://jsfiddle.net" target="_blank">NONE</a></li></ul></li></ul></nav></div>'; 
-            $(obj).before(btnElement);
+    storage.get("nstate", function(i){ 
+        if (i.nstate){
+            $(prec).each(function(i, obj){
+                if (!$(obj).closest(".snippet").length){
+                    var btnElement = '<div class="nl--exporter--menu"><nav><ul><li><span class="nl--exporter--btn"></span><ul class="nl--exporter--inner"><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--js"><a>JS</a></li><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--html"><a>HTML</a></li><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--css"><a>CSS</a></li><li class="nl--exporter--btn--trigger" id="nl--exporter--btn--none"><a href="http://jsfiddle.net" target="_blank">NONE</a></li></ul></li></ul></nav></div>'; 
+                    $(obj).before(btnElement);
+                }
+            });
         }
     });
 }
