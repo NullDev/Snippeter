@@ -17,6 +17,9 @@ $(document).ready(function(){
             $("#count").text((i.count ? i.count : "0"));
             $("#plural").text((i.count == 1 ? "" : "s")); 
         });
+        storage.get("nstate", function(i){ $(".switch-box-input").prop("checked", i.nstate); });
         return true;
     });
+
+    $(".switch-box-input").click(function(){ $(this).is(':checked') ? storage.set({ nstate: true }) : storage.set({ nstate: false }); });
 });
