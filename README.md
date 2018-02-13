@@ -9,6 +9,8 @@ Export StackOverflow snippets to JSFiddle
 
 This is a chrome extension to export [StackOverflow](https://stackoverflow.com) code snippets to [JSFiddle](https://jsfiddle.net) for testing and modifying them.
 
+[![Github All Releases](https://img.shields.io/github/release/NLDev/Snippeter.svg)](https://github.com/NLDev/Snippeter/releases)
+
 <hr>
 
 ## :wrench: Installation
