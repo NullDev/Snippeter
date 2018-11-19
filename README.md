@@ -41,6 +41,10 @@ This way you will get automatic updates.
 <img height="500" width="auto" src="https://raw.githubusercontent.com/NLDev/Snippeter/master/.src/scr1.png" />
 <img height="300" width="auto" src="https://raw.githubusercontent.com/NLDev/Snippeter/master/.src/scr2.png" />
 </div>
+<hr>
+You can also export static snippets:
+<br>
+<img height="500" width="auto" src="https://raw.githubusercontent.com/NLDev/Snippeter/master/.src/scr3.png" />
 <br>
 </p>
 
