@@ -20,9 +20,7 @@ var initData = function(){
 }
 
 var jsfRequest = function(resObj){
-    var js   = (resObj.js   ? resObj.js   : "");
-    var css  = (resObj.css  ? resObj.css  : "");
-    var html = (resObj.html ? resObj.html : "");
+    var [js, css, html] = [resObj.js || "", resObj.css || "", resObj.html || ""];
 
     postReq("https://jsfiddle.net/api/post/library/pure/", { js: js, css: css, html: html });
 };
